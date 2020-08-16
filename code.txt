@@ -1,0 +1,287 @@
+
+<!DOCTYPE html>
+<html lang="en">
+<head>
+	<meta charset="UTF-8">
+	<title>Priority Pulse</title>
+<script type = "text/javascript">
+  function validate() {
+         if( document.myForm.Name.value == "" ) {
+            alert( "Please provide Patient's Name!" );
+            document.myForm.Name.focus() ;
+            return false;
+         }
+          if( document.myForm.Age.value == "" || isNaN( document.myForm.Age.value )) 
+            {
+            alert( "Please provide Age" );
+            document.myForm.Age.focus() ;
+            return false;
+         }
+         if( document.myForm.Case.value == "" ) {
+            alert( "Please provide Case" );
+            document.myForm.Case.focus() ;
+            return false;
+         }
+         if( document.myForm.Priority.value == "" || isNaN( document.myForm.Priority.value )||document.myForm.Priority.value>5) 
+            {
+            alert( "Please provide Valid Priority<=5" );
+            document.myForm.Priority.focus() ;
+            return false;
+         }
+         if( document.myForm.Contact.value == "" || isNaN( document.myForm.Contact.value )) 
+            {
+            alert( "Please provide Valid Contact Number" );
+            document.myForm.Contact.focus() ;
+            return false;
+         }
+         return( true );
+      }
+   function myFunction() {
+  var x = document.getElementById("myDIV");
+  if (x.style.display === "none") {
+    x.style.display = "block";
+  } else {
+    x.style.display = "none";
+  }
+}
+</script>
+
+          
+<style>
+body{
+   background-color:#2f303a;
+   font-size:180%;
+   width:100%;
+}
+header
+{
+width:100%;
+font-size:130%;
+display:block;
+}
+.main
+{
+clear:both;
+display:block;
+background-color:#ffffff;
+}
+nav{
+display:inline-block;
+width:70%;
+float:right;
+}
+nav a
+{
+ float:right;
+ text-decoration:none;
+  width:15%;
+  color:#ffffff;
+  display:inline-block;
+  text-align:center;
+  margin:0.5%;
+  padding:2px;
+  border-radius:5px;
+}
+.d
+{
+ font-family: Arial, Helvetica, sans-serif;
+ width:300px;
+   vertical-align: top;
+  line-height: normal;
+ font-weight: bold;
+font-size: 120%;
+margin-right:2%;
+text-decoration:none;
+  color:#ffffff;
+  display:inline-block;
+  text-align:center;
+  margin:1%;
+  padding:2px;
+  border-radius:5px;
+}
+.im
+{
+display:block;
+  height:900px;
+  width:900px;
+  text-align:left;
+  margin-top:20px;
+  margin-left:20px;
+}
+.active
+{
+  background-color:#ffffff;
+  color:#2f303a;
+}
+.main p{
+color:#ffffff;
+}
+.a{
+width:40%;
+margin:0%;
+}
+.b
+{
+background:#ffffff;
+text-align:center;
+width:35%;
+height:100%;
+display:inline-block;
+float:left;
+}
+.b p
+{
+color:#000000;
+margin:0;
+}
+  .center { 
+    margin:8%;
+  }
+.tex{
+border-style:inset;
+ border-top-style: none;
+ border-left-style: none;
+border-color:#f59494;
+height:100px;
+width:100%;
+background: #d3d9e0; 
+padding-right: 50%; 
+padding-left: 3%;
+margin-bottom:2%;
+font-size:120%;
+}
+.sub{
+height: 100px;
+margin:5% 40% 0% 30%;
+width: 400px;
+}
+.left
+{
+display:inline-block;
+float:left;
+height:50%;
+font-size:150%;
+background-color:#2f303a;
+width:65%;
+}
+footer
+{
+clear:both;
+display:none;
+}
+.tab{
+width:80%;
+margin-left:auto;
+margin-right:auto;
+font-size:120%;
+background-color:#fdfdfd;
+}
+</style>
+</head>
+<body>
+	<header>
+                  <a href="" class="d">Priority Pulse</a>
+		<nav>
+                        <a href=""><img src="Profile.png" class="a" alt="Profile.jpg"/></a>
+			<a href="" style="margin:2% 0.5%;">Logout</a>
+			<a href="" style="margin:2% 0.5%;">Profile</a>
+                        <a href="" style="margin:2% 0.5%;">Active Rides</a>
+                        <a href="project.html" class = "active" style="margin:2% 0.5%;">Home</a>
+		</nav>
+	</header>
+<main style="display:block;">
+		<section class="main">
+                     <section style="display:inline-block;width:100%;">
+                      <section class = "left">
+			   <img src="Ambulance.png" class="im" alt="Ambulance.jpg"/>
+                           <section>
+                           <p>An issue that is never-ending in our country is the traffic</p>
+                           <p>The core problem with the traffic arises when an ambulance tries to cross over</p>
+		           <p>Our team Priority Pulse is reaching out to this issue with a Priority-based solution</p> 
+                           </section>              
+                       </section>
+                      <section class="b">
+                           <form action = "" name = "myForm" onsubmit = "return(validate());">
+                                <p style="font-weight:bold;font-size:150%;">Personal Details</p>
+                                <p>Fill the Details Below</p>
+                                 <table border = "0" class="center">
+            
+            <tr>
+               <td><input type = "text" name = "Name" placeholder="Patient Name" class="tex"/></td>
+            </tr>
+            
+            <tr>
+               <td><input type = "text" name = "Age" placeholder="Patient Age" class="tex"/></td>
+            </tr>
+            
+            <tr>
+               <td><input type = "text" name = "Case" placeholder="Case" class="tex"/></td>
+            </tr>
+             <tr>
+               <td><input type = "text" name = "Priority" placeholder="Priority" class="tex"/></td>
+            </tr>
+             <tr>
+               <td><input type = "text" name = "Contact" placeholder="Contact" class="tex"/></td>
+            </tr>
+            <tr>
+               <td><input type = "submit" value = "Submit" class="sub" style="background-color:#f59494;text-align:center;font-size:120%;" /></td>
+            </tr>
+            <tr>
+                <td style="text-align:right;font-size:120%;width:100%;margin:0% 5% 5% 10%;padding-left:50px;"><p>getting problem in submitting</p></td>
+            </tr>
+            <tr>
+               <td><input type = "button" onClick="myFunction()" value = "Track Patient" class="sub" style="background-color:#f59494;text-align:center;font-size:120%;" /></td>
+            </tr>
+            </table>
+                           </form>
+                      </section>
+                   </section>
+         </section>
+</main>
+<div style="display:block;" id="myDIV">
+
+           <table  style="border: 1px solid black;" class="tab">
+  <tr style="background-color:#f59494;">
+    <th>S.No</th>
+    <th>Patient Name</th>
+    <th>Patient Age</th>
+    <th>Case</th>
+    <th>Priority</th>
+    <th>Contact</th>
+  </tr>
+  <tr >
+    <td>1</td>
+    <td>Nithish</td>
+    <td>38</td>
+    <td>Accident</td>
+    <td>91826 87397</td>
+    <td>4</td>
+ 
+  </tr>
+    <tr style="background-color:#d3d9e0;">
+    <td>2</td>
+    <td>Kiran</td>
+    <td>20</td>
+    <td>Heart Stroke</td>
+    <td>7032629788</td>
+    <td>5</td>
+ 
+  </tr>
+    <tr >
+    <td>3</td>
+    <td>Sudeep</td>
+    <td>60</td>
+    <td>High BP</td>
+    <td>95054 45002</td>
+    <td>3</td>
+ 
+  </tr>
+  
+</table>
+</div>
+               </body>
+
+  
+
+</html>
+ 
