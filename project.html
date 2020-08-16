@@ -4,7 +4,7 @@
 <head>
 	<meta charset="UTF-8">
 	<title>Priority Pulse</title>
-<script type = "text/javascript">
+<script>
   function validate() {
          if( document.myForm.Name.value == "" ) {
             alert( "Please provide Patient's Name!" );
@@ -63,11 +63,10 @@ display:block;
 {
 clear:both;
 display:block;
-background-color:#ffffff;
 }
 nav{
 display:inline-block;
-width:70%;
+width:80%;
 float:right;
 }
 nav a
@@ -98,15 +97,15 @@ text-decoration:none;
   margin:1%;
   padding:2px;
   border-radius:5px;
+
 }
 .im
 {
 display:block;
-  height:900px;
-  width:900px;
+  height:100%;
+  width:100%;
   text-align:left;
   margin-top:20px;
-  margin-left:20px;
 }
 .active
 {
@@ -124,10 +123,9 @@ margin:0%;
 {
 background:#ffffff;
 text-align:center;
-width:35%;
-height:100%;
+width:590px;
+height:1000px;
 display:inline-block;
-float:left;
 }
 .b p
 {
@@ -142,18 +140,18 @@ border-style:inset;
  border-top-style: none;
  border-left-style: none;
 border-color:#f59494;
-height:100px;
-width:100%;
+padding-top:10px;
+padding-bottom:10px;
+width:300%;
 background: #d3d9e0; 
-padding-right: 50%; 
-padding-left: 3%;
-margin-bottom:2%;
+margin-bottom:8%;
 font-size:120%;
+text-align:center;
 }
 .sub{
-height: 100px;
-margin:5% 40% 0% 30%;
-width: 400px;
+height: 80px;
+width: 350px;
+
 }
 .left
 {
@@ -162,7 +160,7 @@ float:left;
 height:50%;
 font-size:150%;
 background-color:#2f303a;
-width:65%;
+width:40%;
 }
 footer
 {
@@ -175,6 +173,11 @@ margin-left:auto;
 margin-right:auto;
 font-size:120%;
 background-color:#fdfdfd;
+text-align:center;
+}
+.center
+{
+width:30%;
 }
 </style>
 </head>
@@ -194,17 +197,18 @@ background-color:#fdfdfd;
                      <section style="display:inline-block;width:100%;">
                       <section class = "left">
 			   <img src="Ambulance.png" class="im" alt="Ambulance.jpg"/>
-                           <section>
+                           <section style="font-size:100%;">
                            <p>An issue that is never-ending in our country is the traffic</p>
                            <p>The core problem with the traffic arises when an ambulance tries to cross over</p>
 		           <p>Our team Priority Pulse is reaching out to this issue with a Priority-based solution</p> 
                            </section>              
                        </section>
-                      <section class="b">
-                           <form action = "" name = "myForm" onsubmit = "return(validate());">
-                                <p style="font-weight:bold;font-size:150%;">Personal Details</p>
+                      <section style="width:60%;display:inline-block;text-align:center;">
+                           <aside class="b">
+                           <form action = "project.html" name = "myForm" onsubmit = "return(validate());">
+                                <p style="font-weight:bold;font-size:150%;">Patient Details</p>
                                 <p>Fill the Details Below</p>
-                                 <table border = "0" class="center">
+                                 <table style:"border:none;" class="center">
             
             <tr>
                <td><input type = "text" name = "Name" placeholder="Patient Name" class="tex"/></td>
@@ -223,17 +227,15 @@ background-color:#fdfdfd;
              <tr>
                <td><input type = "text" name = "Contact" placeholder="Contact" class="tex"/></td>
             </tr>
-            <tr>
-               <td><input type = "submit" value = "Submit" class="sub" style="background-color:#f59494;text-align:center;font-size:120%;" /></td>
-            </tr>
-            <tr>
-                <td style="text-align:right;font-size:120%;width:100%;margin:0% 5% 5% 10%;padding-left:50px;"><p>getting problem in submitting</p></td>
-            </tr>
-            <tr>
-               <td><input type = "button" onClick="myFunction()" value = "Track Patient" class="sub" style="background-color:#f59494;text-align:center;font-size:120%;" /></td>
-            </tr>
-            </table>
+              </table>
+               <input type = "submit" value = "Submit" class="sub" style="background-color:#f59494;text-align:center;font-size:120%;margin:0%;" />
+ 
+                <p style="text-align:right;font-size:120%;width:100%;margin:0% 5% 5% 10%;padding-left:50px;"><p>getting problem in submitting</p>
+                <input type = "button" onClick="myFunction()" value = "Track Patient" class="sub" style="background-color:#f59494;text-align:center;font-size:120%;" />
+  
+         
                            </form>
+                      </aside>
                       </section>
                    </section>
          </section>
@@ -246,8 +248,8 @@ background-color:#fdfdfd;
     <th>Patient Name</th>
     <th>Patient Age</th>
     <th>Case</th>
-    <th>Priority</th>
     <th>Contact</th>
+    <th>Priority</th>
   </tr>
   <tr >
     <td>1</td>
